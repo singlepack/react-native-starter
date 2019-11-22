@@ -2,14 +2,14 @@ import React from 'react'
 import {Content, Text, Card, CardItem,Body} from 'native-base'
 import { useStore, observer } from '../../../store'
 
-const HomeView = observer(() => {
+const NewsView = observer(() => {
     let store = useStore();
     return (
         <Content>
             <Card>
                 <CardItem>
                     <Body>
-                        <Text>Hello, {store.user.data.name}</Text>
+                        <Text>News</Text>
                     </Body>
                 </CardItem>
             </Card>
@@ -17,4 +17,4 @@ const HomeView = observer(() => {
     );
 });
 
-export default HomeView;
+export default NewsView;

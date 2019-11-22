@@ -5,7 +5,7 @@ class AuthHeader extends React.Component{
 
     render() {
         return (
-                <Header style={{ backgroundColor: 'red' }}>
+                <Header>
                     <Body>
                         <Title>Header</Title>
                     </Body>

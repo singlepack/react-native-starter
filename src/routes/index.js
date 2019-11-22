@@ -1,26 +1,24 @@
 import React from 'react';
-import {createAppContainer } from "react-navigation";
-import {createStackNavigator} from 'react-navigation-stack'
+
 import Home from "./Home";
 import CoreLayout from "../layouts/CoreLayout";
+import { Router, Scene } from 'react-native-router-flux';
 import Login from "./Login";
+import News from "./News";
 
-const Stack = createStackNavigator({
-    Home: {screen: Home},
-    Login: {screen: Login},
-},{
-    headerMode: 'none',
-    navigationOptions: {
-        headerVisible: false,
-    }
-});
 
-export const Navigator = createAppContainer(Stack);
+const RoutesList = () => {
+    return (
+        <CoreLayout>
+            <Router>
+                <Scene key="root" hideNavBar={true}>
+                    <Scene key="home" component={Home} title="Home" initial={true} />
+                    <Scene key="news" component={News} title="News" />
+                    <Scene key="login" component={Login} title="Login" />
+                </Scene>
+            </Router>
+        </CoreLayout>
+    )
+};
 
-export const createRoutes = () => (
-    <CoreLayout>
-        <Navigator/>
-    </CoreLayout>
-);
-
-export default createRoutes
+export default RoutesList;
