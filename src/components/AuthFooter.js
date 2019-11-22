@@ -1,20 +1,18 @@
-import React from 'react'
+import React,{ useState } from 'react'
 import {Footer, FooterTab, Button, Text, Icon } from 'native-base';
 import { Actions } from 'react-native-router-flux';
-import {observer, useStore} from "../store"
 
-const AuthFooter = observer(() => {
-    const store = useStore();
-    console.log(store.currentPage);
+const AuthFooter = () => {
+    const [currentScene, setCurrentScene] = useState("home");
 
     return (
         <Footer>
             <FooterTab>
-                <Button vertical onPress={() => {Actions.home()}} active={store.currentPage === "home"}>
+                <Button vertical onPress={() => {setCurrentScene("home"); Actions.home()}} active={currentScene === "home"}>
                     <Icon name="home"/>
                     <Text>Home</Text>
                 </Button>
-                <Button vertical onPress={() => {Actions.news()}} active={store.currentPage === "news"}>
+                <Button vertical onPress={() => {setCurrentScene("news"); Actions.news()}} active={currentScene === "news"}>
                     <Icon name="paper" />
                     <Text>News</Text>
                 </Button>
@@ -29,6 +27,6 @@ const AuthFooter = observer(() => {
             </FooterTab>
         </Footer>
     );
-});
+};
 
 export default AuthFooter

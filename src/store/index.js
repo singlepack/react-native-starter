@@ -5,8 +5,7 @@ export { observer } from 'mobx-react'
 
 export function createStore() {
     return {
-        currentPage: "home",
-        user: new User(),
+        user: new User()
     }
 }
 

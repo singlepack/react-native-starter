@@ -8,6 +8,7 @@ import News from "./News";
 
 
 const RoutesList = () => {
+
     return (
         <CoreLayout>
             <Router>
