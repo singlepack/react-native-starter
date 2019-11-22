@@ -8,6 +8,11 @@ import Login from "./Login";
 const Stack = createStackNavigator({
     Home: {screen: Home},
     Login: {screen: Login},
+},{
+    headerMode: 'none',
+    navigationOptions: {
+        headerVisible: false,
+    }
 });
 
 export const Navigator = createAppContainer(Stack);

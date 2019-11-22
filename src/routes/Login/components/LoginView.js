@@ -1,12 +1,12 @@
 import React from 'react'
-import {View, Text} from 'react-native'
+import {Content, Text} from 'native-base'
 
 class LoginView extends React.Component{
     render() {
         return (
-            <View>
+            <Content>>
                 <Text>Login View!</Text>
-            </View>
+            </Content>
         );
     }
 }

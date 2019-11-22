@@ -1,13 +1,13 @@
 import React from 'react'
-import {Text, View} from "react-native";
+import {Content, Text} from 'native-base'
 import { useStore, observer } from '../../../store'
 
 const HomeView = observer(() => {
     let store = useStore();
     return (
-        <View>
+        <Content>
             <Text>Hello, {store.user.data.name}</Text>
-        </View>
+        </Content>
     );
 });
 
