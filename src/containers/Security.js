@@ -1,7 +1,7 @@
 import React from 'react'
 import Login from '../routes/Login'
 import { useStore, observer } from '../store'
-import AuthLayout from "../layouts/AuthLayout";
+import {Container} from "native-base";
 
 const Security = observer(({ children }) => {
     const store = useStore();
@@ -11,10 +11,10 @@ const Security = observer(({ children }) => {
     }
 
     return (
-        <AuthLayout>
+        <Container>
             {children}
-        </AuthLayout>
-    );
+        </Container>
+        );
 });
 
 export default Security

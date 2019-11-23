@@ -1,5 +1,5 @@
 import React from 'react'
-import {Text, Icon,Container,Content, List, ListItem, Left, Body, Right } from 'native-base';
+import {Text, Icon,Container,Content, List, ListItem, Left, Body, Right, Header } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 
 const DrawerContent = (props) => {
@@ -9,6 +9,11 @@ const DrawerContent = (props) => {
 
     return (
         <Container>
+            <Header>
+                <Body>
+                    <Text>Header</Text>
+                </Body>
+            </Header>
             <Content>
                 <List>
                 {
@@ -16,7 +21,7 @@ const DrawerContent = (props) => {
                         return (
                             <ListItem noBorder icon key={element.key} onPress={() => Actions[element.key]()} selected={index === activeTabIndex}>
                                 <Left><Icon name={element.routes[0].params.icon}/></Left>
-                                <Body><Text>{element.key.toUpperCase()}</Text></Body>
+                                <Body><Text>{element.routes[0].params.title.toUpperCase()}</Text></Body>
                                 <Right/>
                             </ListItem>
                         )

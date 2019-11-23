@@ -10,7 +10,7 @@ export default class CoreLayout extends React.Component{
         return (
             <StyleProvider style={getTheme(material)}>
                 <Security>
-                    {this.props.children}
+                     {this.props.children}
                 </Security>
             </StyleProvider>
         );
