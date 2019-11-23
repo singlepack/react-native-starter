@@ -2,7 +2,7 @@ import React from 'react'
 import {Footer, FooterTab, Button, Text, Icon } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 
-const CustomTabs = (props) => {
+const TabsContent = (props) => {
 
     const { state } = props.navigation;
     const activeTabIndex = state.index;
@@ -25,4 +25,4 @@ const CustomTabs = (props) => {
     );
 };
 
-export default CustomTabs
+export default TabsContent
